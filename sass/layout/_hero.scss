@@ -1,11 +1,9 @@
 .hero {
-  margin: 0 auto;
   background-color: var(--background-section-color);
   background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../img/hero/desktop/bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 1600px;
   background-size: cover;
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -13,21 +11,34 @@
   }
 
   &__container {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     text-align: center;
   }
 
   &__title {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--main-color);
-    max-width: 696px;
+    max-width: 360px;
     margin: 0 auto;
     margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__container {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+
+    &__title {
+      font-size: 44px;
+      line-height: 1.36;
+      max-width: 696px;
+    }
   }
 }

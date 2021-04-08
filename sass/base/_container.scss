@@ -15,9 +15,14 @@
     width: 1200px;
   }
 
+  @media screen and (max-width: 767px) {
+    .header & {
+      justify-content: space-between;
+    }
+  }
+
   .header & {
     display: flex;
-    justify-content: space-between;
     align-items: center;
   }
 }

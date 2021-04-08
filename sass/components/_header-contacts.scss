@@ -5,44 +5,74 @@
     }
   }
 }
+@media screen and (min-width: 768px) {
+  .contacts {
+    &__list {
+      margin-left: 84px;
+    }
 
-// .contacts {
-//   &__list {
-//     @include flex();
-//     margin-left: auto;
-//   }
+    &__link {
+      @include flex();
+      align-items: center;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+      fill: var(--link-color);
+      color: var(--link-color);
+    }
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
 
-//   &__item:not(:last-child) {
-//     margin-right: 50px;
-//   }
+    &__icon-mail {
+      margin-right: 8px;
+      width: 14px;
+      height: 10px;
+    }
+    &__icon-tel {
+      margin-right: 8px;
+      width: 10px;
+      height: 14px;
+    }
+  }
+}
 
-//   &__link {
-//     @include flex();
-//     align-items: center;
-//     font-weight: 500;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: 0.02em;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-//     color: var(--link-color);
-//     fill: var(--link-color);
-//     transition: color 250ms, fill 250ms var(--animation-timing-function);
+@media screen and (min-width: 1200px) {
+  .contacts {
+    &__list {
+      @include flex();
+      margin-left: auto;
+    }
 
-//     &:hover,
-//     &:focus {
-//       color: var(--accent-color);
-//       fill: var(--accent-color);
-//     }
-//   }
-//   &__icon-mail {
-//     margin-right: 10px;
-//     width: 16px;
-//     height: 12px;
-//   }
-//   &__icon-tel {
-//     margin-right: 10px;
-//     width: 12px;
-//     height: 16px;
-//   }
-// }
+    &__item:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+
+    &__link {
+      font-size: 14px;
+      line-height: 1.14;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      transition: color 250ms, fill 250ms var(--animation-timing-function);
+
+      &:hover,
+      &:focus {
+        color: var(--accent-color);
+        fill: var(--accent-color);
+      }
+    }
+
+    &__icon-mail {
+      margin-right: 10px;
+      width: 16px;
+      height: 12px;
+    }
+    &__icon-tel {
+      margin-right: 10px;
+      width: 12px;
+      height: 16px;
+    }
+  }
+}

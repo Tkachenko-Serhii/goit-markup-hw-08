@@ -27,22 +27,26 @@
                     </li>
                 </ul>
             </nav>
-            <button type="button" class="burger__btn" data-menu-button>
-                <svg class="burger__icon">
+            <button type="button"
+            class="burger__btn"
+            aria-expanded="false"
+            aria-controls="mobile__menu"
+            data-menu-button>
+                <svg class="burger__icon" aria-label="Кнопка открытия меню">
                     <use href="./img/icons.svg#burger"></use>
                 </svg>
             </button>
             <ul class="list contacts__list">
                 <li class="contacts__item"><a class="link contacts__link" href="mailto:info@example.com" lang="en">
                     <svg class="contacts__icon-mail">
-                        <use href="./img/icons.svg#envelope" width=16px height=12px></use>
+                        <use href="./img/icons.svg#envelope"></use>
                     </svg>info@example.com</a></li>
                 <li class="contacts__item"><a class="link contacts__link" href="tel:+380991111111"><svg class="contacts__icon-tel">
-                    <use href="./img/icons.svg#smartphone" width=12px height=16px></use>
+                    <use href="./img/icons.svg#smartphone"></use>
                 </svg>+38 099 111 11 11</a></li>
             </ul>
         </div>
-        <div class="mobile__menu is-open" data-menu>
+        <div class="mobile__menu" id="mobile__menu" data-menu>
             <button class="mobile__btn-close" data-menu-close>
                 <svg class="mobile__icon" width=40px height=40px>
                     <use href="./img/icons.svg#close"></use>
@@ -85,13 +89,12 @@
     </header>
     <main>
     <!--HERO-->
-        <!--<section class="hero">
+        <section class="hero">
             <div class="container hero__container">
                 <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
                 <button class="hero__btn" type="button" data-modal-open>Заказать услугу</button>
             </div>
-            
-        </section>-->
+        </section>
     <!--ADVANTAGE-->
         <!-- <section class="advantage">
             <div class="container">

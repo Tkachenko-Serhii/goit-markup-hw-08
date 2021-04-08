@@ -88,9 +88,14 @@ img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .header .container {
+    justify-content: space-between;
+  }
+}
+
 .header .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -129,7 +134,8 @@ img {
     position: fixed;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     padding: 48px 40px;
     background-color: white;
     opacity: 0;
@@ -303,7 +309,6 @@ img {
   .navigation__logo {
     padding-top: 26px;
     padding-bottom: 26px;
-    margin-right: 88px;
   }
 }
 
@@ -313,7 +318,6 @@ img {
     line-height: 1.19;
     padding-top: 24px;
     padding-bottom: 24px;
-    margin-right: 93px;
   }
 }
 
@@ -328,9 +332,119 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+  .navigation__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .navigation__list {
+    display: flex;
+    align-items: center;
+    margin-left: 88px;
+  }
+  .navigation__link {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--title-color);
+    transition: color 250ms var(--animation-timing-function);
+  }
+  .navigation__link-active {
+    color: var(--accent-color);
+  }
+  .navigation__link-active::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    content: '';
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .navigation__link:hover, .navigation__link:focus {
+    color: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navigation__list {
+    margin-left: 93px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .contacts__list {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__list {
+    margin-left: 84px;
+  }
+  .contacts__link {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    fill: var(--link-color);
+    color: var(--link-color);
+  }
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .contacts__icon-mail {
+    margin-right: 8px;
+    width: 14px;
+    height: 10px;
+  }
+  .contacts__icon-tel {
+    margin-right: 8px;
+    width: 10px;
+    height: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__list {
+    display: flex;
+    margin-left: auto;
+  }
+  .contacts__item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .contacts__link {
+    font-size: 14px;
+    line-height: 1.14;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color 250ms, fill 250ms var(--animation-timing-function);
+  }
+  .contacts__link:hover, .contacts__link:focus {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+  }
+  .contacts__icon-mail {
+    margin-right: 10px;
+    width: 16px;
+    height: 12px;
+  }
+  .contacts__icon-tel {
+    margin-right: 10px;
+    width: 12px;
+    height: 16px;
   }
 }
 
@@ -687,12 +801,10 @@ img {
 }
 
 .hero {
-  margin: 0 auto;
   background-color: var(--background-section-color);
   background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/desktop/bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 1600px;
   background-size: cover;
 }
 
@@ -703,22 +815,34 @@ img {
 }
 
 .hero__container {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
 }
 
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-color);
-  max-width: 696px;
+  max-width: 360px;
   margin: 0 auto;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
 }
 
 .advantage {
