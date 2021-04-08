@@ -27,6 +27,11 @@
                     </li>
                 </ul>
             </nav>
+            <button type="button" class="burger__btn" data-menu-button>
+                <svg class="burger__icon">
+                    <use href="./img/icons.svg#burger"></use>
+                </svg>
+            </button>
             <ul class="list contacts__list">
                 <li class="contacts__item"><a class="link contacts__link" href="mailto:info@example.com" lang="en">
                     <svg class="contacts__icon-mail">
@@ -35,20 +40,60 @@
                 <li class="contacts__item"><a class="link contacts__link" href="tel:+380991111111"><svg class="contacts__icon-tel">
                     <use href="./img/icons.svg#smartphone" width=12px height=16px></use>
                 </svg>+38 099 111 11 11</a></li>
-            </ul>           
+            </ul>
         </div>
+        <div class="mobile__menu is-open" data-menu>
+            <button class="mobile__btn-close" data-menu-close>
+                <svg class="mobile__icon" width=40px height=40px>
+                    <use href="./img/icons.svg#close"></use>
+                </svg>
+            </button>
+            <ul class="list mobile__list">
+                <li class="mobile__item">
+                    <a class="link mobile__link" href="./index.html">Студия</a>
+                </li>
+                <li class="mobile__item">
+                    <a class="link mobile__link" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="mobile__item">
+                    <a class="link mobile__link" href="">Контакты</a>
+                </li>
+            </ul>
+            <ul class="list contact__list">
+                <li class="contact__item">
+                    <a class="link contact__link-tel" href="tel:+380991111111">+38 096 111 11 11</a>
+                </li>
+                <li class="contact__item">
+                    <a class="link contact__link-mail" href="mailto:info@example.com" lang="en">info@example.com</a>
+                </li>
+            </ul>
+            <ul class="list social__list-mobile">
+                <li class="social__item-mobile">
+                    <a href="" class="link social__link-mobile">Instagram</a>
+                </li>
+                <li class="social__item-mobile">
+                    <a href="" class="link social__link-mobile">Twitter</a>
+                </li>
+                <li class="social__item-mobile">
+                    <a href="" class="link social__link-mobile">Facebook</a>
+                </li>
+                <li class="social__item-mobile">
+                    <a href="" class="link social__link-mobile">LinkedIn</a>
+                </li>
+            </ul>
+        </div>           
     </header>
     <main>
     <!--HERO-->
-        <section class="hero">
+        <!--<section class="hero">
             <div class="container hero__container">
                 <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
                 <button class="hero__btn" type="button" data-modal-open>Заказать услугу</button>
             </div>
             
-        </section>
+        </section>-->
     <!--ADVANTAGE-->
-        <section class="advantage">
+        <!-- <section class="advantage">
             <div class="container">
                 <h2 class="visually-hidden">Advantage</h2>
                 <ul class="list advantage__list">
@@ -90,9 +135,9 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
     <!--GALLERY-->
-        <section class="gallery">
+        <!-- <section class="gallery">
             <div class="container">
                 <h2 class="title title__section">Чем мы занимаемся</h2>
                 <ul class="list gallery__list">
@@ -128,9 +173,9 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
     <!--TEAM-->
-        <section class="team section">
+        <!-- <section class="team section">
             <div class="container">
                 <h2 class="title title__section">Наша команда</h2>
                 <ul class="list team__list">
@@ -338,8 +383,8 @@
                     </li>
                 </ul>
             </div>
-        </section>
-        <section class="section customers">
+        </section> -->
+        <!-- <section class="section customers">
             <div class="container">
                 <h2 class="title title__section">Постоянные клиенты</h2>
                 <ul class="list customers__list">
@@ -389,9 +434,9 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container footer__container">
             <div class="footer__address">
             <a class="link navigation__logo footer__logo" href="./index.html" lang="en">Web<span class="navigation__logo-white">Studio</span></a>
@@ -456,7 +501,7 @@
                 </form>
             </div>
         </div>
-    </footer>
+    </footer> -->
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <button class="modal__btn--close" type="button" data-modal-close>
@@ -506,5 +551,6 @@
             </div>
         </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

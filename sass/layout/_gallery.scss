@@ -1,7 +1,15 @@
 .gallery {
+  display: none;
+}
+
+.gallery {
   background-color: var(--main-color);
   padding-top: 47px;
   padding-bottom: 94px;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 
   &__list {
     @include flex();
