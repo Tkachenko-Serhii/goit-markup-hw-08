@@ -1,15 +1,25 @@
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
+  position: relative;
   transition: transform 250ms var(--animation-timing-function);
-  width: 528px;
-  height: 582px;
   padding: 40px;
   background: var(--main-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @media screen and (min-width: 480px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 450px;
+    height: 609px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0.9);
@@ -110,21 +120,22 @@
 }
 
 .contract {
-  display: flex;
-  text-align: center;
-
-  &__terms {
-    margin-bottom: 30px;
-  }
-
   &__terms--desc {
     display: inline-flex;
     align-items: center;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--link-color);
     margin-bottom: 30px;
+    min-width: 346px;
+
+    @media screen and (min-width: 1200px) {
+      & {
+        font-size: 14px;
+        line-height: 1.71;
+      }
+    }
   }
 
   &__terms--desc::before {
@@ -154,10 +165,17 @@
   }
 
   &__link {
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     color: var(--accent-color);
+
+    @media screen and (min-width: 1200px) {
+      & {
+        font-size: 14px;
+        line-height: 1.71;
+      }
+    }
   }
 }

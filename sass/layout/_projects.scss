@@ -1,16 +1,37 @@
 .project {
-  &__list {
-    @include flex();
-    flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
+  @media screen and (max-width: 767px) {
+    &__item {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &__list {
+      @include flex();
+      flex-wrap: wrap;
+      margin-left: -30px;
+      margin-top: -30px;
+    }
+
+    &__item {
+      margin-left: 30px;
+      margin-top: 30px;
+      flex-basis: calc(100% / 2 - 30px);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__item {
+      flex-basis: calc(100% / 3 - 30px);
+    }
+  }
+
+  &__thumb {
+    position: relative;
+    overflow: hidden;
   }
 
   &__item {
-    margin-left: 30px;
-    margin-top: 30px;
     background-color: var(--main-color);
-    flex-basis: calc(100% / 3 - 30px);
     transition: box-shadow 250ms var(--animation-timing-function);
 
     &:hover {
@@ -38,10 +59,5 @@
     line-height: 1.87;
     letter-spacing: 0.03em;
     color: var(--link-color);
-  }
-
-  &__thumb {
-    position: relative;
-    overflow: hidden;
   }
 }

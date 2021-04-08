@@ -1,4 +1,9 @@
 .section {
   padding-top: var(--section-pt);
   padding-bottom: var(--section-pb);
+
+  @media screen and (min-width: 1200px) {
+    padding-top: var(--section-pt-desk);
+    padding-bottom: var(--section-pb-desk);
+  }
 }
