@@ -623,11 +623,17 @@ img {
 .hero {
   margin: 0 auto;
   background-color: var(--background-section-color);
-  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/bg.jpg);
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/desktop/bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   max-width: 1600px;
   background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../img/hero/desktop/bg@2x.jpg);
+  }
 }
 
 .hero__container {
