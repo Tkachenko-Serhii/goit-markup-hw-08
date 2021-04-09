@@ -193,6 +193,18 @@ img {
     letter-spacing: 0.02em;
     color: var(--link-color);
   }
+}
+
+@media screen and (max-width: 767px) and (max-width: 479px) {
+  .social__list-mobile {
+    flex-wrap: wrap;
+  }
+  .social__item-mobile {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .social__list-mobile {
     display: flex;
   }

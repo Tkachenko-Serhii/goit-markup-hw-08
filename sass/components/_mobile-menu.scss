@@ -91,6 +91,16 @@
   }
 
   .social {
+    @media screen and (max-width: 479px) {
+      &__list-mobile {
+        flex-wrap: wrap;
+      }
+
+      &__item-mobile {
+        margin-bottom: 20px;
+      }
+    }
+
     &__list-mobile {
       display: flex;
     }
