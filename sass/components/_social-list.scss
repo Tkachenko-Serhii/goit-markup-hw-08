@@ -1,14 +1,11 @@
-@media screen and (min-width: 480px) {
-  .social {
-    &__list {
-      justify-content: space-between;
-    }
-  }
-}
 .social {
   &__list {
-    justify-content: center;
     @include flex();
+    justify-content: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
   }
 
   &__link {
@@ -42,7 +39,9 @@
       &:focus {
         background-color: var(--accent-color);
       }
+    }
 
+    &__icon {
       .social__link:focus &,
       .social__link:hover & {
         fill: var(--main-color);
