@@ -1,5 +1,8 @@
 .modal {
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--animation-timing-function);
   padding: 40px;
   width: 100%;
@@ -10,9 +13,7 @@
 
   @media screen and (min-width: 480px) {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+
     max-width: 450px;
     height: 609px;
   }
@@ -129,7 +130,6 @@
     letter-spacing: 0.03em;
     color: var(--link-color);
     margin-bottom: 30px;
-    min-width: 346px;
 
     @media screen and (min-width: 1200px) {
       & {
@@ -142,7 +142,7 @@
   &__terms--desc::before {
     display: block;
     content: '';
-    width: 16px;
+    min-width: 16px;
     height: 15px;
     margin-right: 8px;
     border: 2px solid var(--title-color);
@@ -163,6 +163,10 @@
       border-color: var(--accent-color);
       box-shadow: 0 0 0 2px transparent;
     }
+
+    @media screen and (max-width: 479px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__link {
@@ -173,10 +177,8 @@
     color: var(--accent-color);
 
     @media screen and (min-width: 1200px) {
-      & {
-        font-size: 14px;
-        line-height: 1.71;
-      }
+      font-size: 14px;
+      line-height: 1.71;
     }
   }
 }

@@ -151,9 +151,12 @@ img {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transform: scale(0.9);
   }
   .mobile__menu.is-open {
+    transform: scale(1);
     opacity: 1;
+    transition: opacity 250ms var(--animation-timing-function), transform 250ms var(--animation-timing-function);
     visibility: visible;
     pointer-events: auto;
   }
@@ -549,6 +552,9 @@ img {
 
 .modal {
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--animation-timing-function);
   padding: 40px;
   width: 100%;
@@ -561,9 +567,6 @@ img {
 @media screen and (min-width: 480px) {
   .modal {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
     max-width: 450px;
     height: 609px;
   }
@@ -681,7 +684,6 @@ img {
   letter-spacing: 0.03em;
   color: var(--link-color);
   margin-bottom: 30px;
-  min-width: 346px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -694,7 +696,7 @@ img {
 .contract__terms--desc::before {
   display: block;
   content: '';
-  width: 16px;
+  min-width: 16px;
   height: 15px;
   margin-right: 8px;
   border: 2px solid var(--title-color);
@@ -714,6 +716,12 @@ img {
   background-origin: border-box;
   border-color: var(--accent-color);
   box-shadow: 0 0 0 2px transparent;
+}
+
+@media screen and (max-width: 479px) {
+  .contract__terms--desc::before {
+    flex-wrap: wrap;
+  }
 }
 
 .contract__link {
