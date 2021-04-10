@@ -1,6 +1,6 @@
 .project {
   @media screen and (max-width: 767px) {
-    &__item {
+    &__item:not(:last-child) {
       margin-bottom: 30px;
     }
   }
